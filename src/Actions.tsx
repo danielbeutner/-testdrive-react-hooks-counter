@@ -1,27 +1,29 @@
 import React, { ReactElement } from 'react';
-import { useStore, ActionType } from './StoreProvider';
+import { useStore } from './StoreProvider';
+import { increment, decrement, reset } from './actions/counter';
 
 export default function ButtonRow(): ReactElement {
     const { dispatch } = useStore();
+
     return (
         <>
             <button
                 onClick={(): void => {
-                    dispatch({ type: ActionType.increment });
+                    dispatch(increment());
                 }}
             >
                 Add
             </button>
             <button
                 onClick={(): void => {
-                    dispatch({ type: ActionType.decrement });
+                    dispatch(decrement());
                 }}
             >
                 Subtract
             </button>
             <button
                 onClick={(): void => {
-                    dispatch({ type: ActionType.reset });
+                    dispatch(reset());
                 }}
             >
                 Reset

@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react';
 import Counter from '~Counter';
-import ButtonRow from '~ButtonRow';
+import Actions from '~Actions';
 
 export default function App(): ReactElement {
     return (
         <>
             <Counter />
-            <ButtonRow />
+            <Actions />
         </>
     );
 }
