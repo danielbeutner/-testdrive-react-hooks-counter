@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Counter from '~Counter';
 import { StoreProvider } from '~StoreProvider';
+import App from '~App';
 
 ReactDOM.render(
     <StoreProvider>
-        <Counter />
+        <App />
     </StoreProvider>,
     document.getElementById('root')
 );
