@@ -1,14 +1,18 @@
 {
-  "name": "react-hooks",
+  "name": "@testdrive/react-hooks-counter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Testdrive for React's hooks with useContext() and useReducer()",
+  "repository": {
+      "type": "git",
+      "url": "github:danielbeutner/-testdrive-react-hooks-counter"
+  },
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
     "lint:fix": "eslint './src/**/*.{ts,tsx}'"
   },
-  "author": "",
+  "author": "Daniel Beutner",
   "license": "MIT",
   "dependencies": {
     "immer": "^3.1.3",
