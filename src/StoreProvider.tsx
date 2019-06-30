@@ -6,8 +6,9 @@ import React, {
     ReactChildren,
     ReactChild
 } from 'react';
-import { Action } from '~types/Action';
-import { initialState, reducer, State } from '~reducers/counter';
+import { Action, ActionCreator } from '~types/Action';
+import * as actions from '~store/actions';
+import { initialState, reducer, State } from '~store/reducers';
 
 interface Props {
     children?: ReactChild | ReactChildren;
@@ -15,12 +16,17 @@ interface Props {
 
 const StoreContext = createContext({
     state: initialState,
-    dispatch: ((): unknown => ({})) as React.Dispatch<Action>
+    dispatch: ((): void => {}) as React.Dispatch<Action>,
+    action: actions
 });
 
 export function StoreProvider(props: Props): ReactElement {
     const [state, dispatch] = useReducer(reducer, initialState);
-    const store = { state, dispatch };
+    const store = {
+        state,
+        dispatch,
+        action: actions
+    };
 
     return (
         <StoreContext.Provider value={store}>
@@ -32,6 +38,7 @@ export function StoreProvider(props: Props): ReactElement {
 export function useStore(): {
     state: State;
     dispatch: React.Dispatch<Action>;
+    action: typeof actions;
 } {
     return useContext(StoreContext);
 }

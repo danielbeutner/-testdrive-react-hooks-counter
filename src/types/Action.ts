@@ -4,19 +4,8 @@ export enum ActionType {
     reset = '[Counter] reset'
 }
 
-export type Payload =
-    | object
-    | object[]
-    | string
-    | number
-    | typeof Error
-    | null
-    | undefined;
-
-export type Meta = object | object[] | null | undefined;
+export type ActionCreator = () => Action;
 
 export interface Action {
     type: ActionType;
-    payload: Payload;
-    meta: Meta;
 }

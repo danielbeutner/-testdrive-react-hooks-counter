@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react';
 import Counter from '~Counter';
-import Actions from '~Actions';
+import CounterActions from '~CounterActions';
 
 export default function App(): ReactElement {
     return (
         <>
             <Counter />
-            <Actions />
+            <CounterActions />
         </>
     );
 }
