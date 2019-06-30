@@ -6,7 +6,7 @@ import React, {
     ReactChildren,
     ReactChild
 } from 'react';
-import { Action, ActionCreator } from '~types/Action';
+import { Action } from '~types/Action';
 import * as actions from '~store/actions';
 import { initialState, reducer, State } from '~store/reducers';
 

@@ -1,4 +1,4 @@
-import { createAction } from '../utils/createAction';
+import { createAction } from '~utils/createAction';
 import { ActionType } from '~types/Action';
 
 export const increment = createAction(ActionType.increment);
