@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { StoreProvider } from '~StoreProvider';
-import App from '~App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { StoreProvider } from '~StoreProvider'
+import App from '~App'
 
 ReactDOM.render(
-    <StoreProvider>
-        <App />
-    </StoreProvider>,
-    document.getElementById('root')
-);
+	<StoreProvider>
+		<App />
+	</StoreProvider>,
+	document.getElementById('root')
+)

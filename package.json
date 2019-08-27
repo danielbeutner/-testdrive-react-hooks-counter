@@ -1,43 +1,44 @@
 {
-    "name": "@testdrive/react-hooks-counter",
-    "version": "1.0.0",
-    "description": "Testdrive for React's hooks with useContext() and useReducer()",
-    "repository": {
-        "type": "git",
-        "url": "github:danielbeutner/-testdrive-react-hooks-counter"
-    },
-    "author": "Daniel Beutner",
-    "license": "MIT",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "parcel src/index.html",
-        "build": "parcel build src/index.html",
-        "clean": "rm -rf -- dist .cache",
-        "lint": "eslint './src/**/*.{ts,tsx}' && pretty-quick --staged"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run lint"
-        }
-    },
-    "dependencies": {
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6"
-    },
-    "devDependencies": {
-        "@types/react": "^16.8.22",
-        "@types/react-dom": "^16.8.4",
-        "@typescript-eslint/eslint-plugin": "^1.11.0",
-        "@typescript-eslint/parser": "^1.11.0",
-        "eslint": "^6.0.1",
-        "eslint-config-prettier": "^5.1.0",
-        "eslint-config-react": "^1.1.7",
-        "eslint-plugin-prettier": "^3.1.0",
-        "eslint-plugin-react": "^7.14.2",
-        "husky": "^2.7.0",
-        "parcel-bundler": "^1.12.3",
-        "prettier": "1.18.2",
-        "pretty-quick": "^1.11.1",
-        "typescript": "^3.5.2"
+  "name": "@testdrive/react-hooks-counter",
+  "version": "1.0.0",
+  "description": "Testdrive for React's hooks with useContext() and useReducer()",
+  "repository": {
+    "type": "git",
+    "url": "github:danielbeutner/-testdrive-react-hooks-counter"
+  },
+  "author": "Daniel Beutner",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf -- dist .cache",
+    "lint-staged": "npm run fix",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "fix": "eslint './src/**/*.{ts,tsx}' --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
     }
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^5.1.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^2.7.0",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "1.18.2",
+    "typescript": "^3.5.3"
+  }
 }
