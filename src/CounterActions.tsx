@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { useStore } from '~StoreProvider'
 
 export default function ButtonRow(): ReactElement {
-	const { dispatch, action } = useStore()
+	const [, dispatch, action] = useStore()
 
 	return (
 		<>

@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { useStore } from '~StoreProvider'
 
 export default function Counter(): ReactElement {
-	const { state } = useStore()
+	const [state] = useStore()
 
 	return (
 		<section className="counter">

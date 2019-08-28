@@ -1,11 +1,9 @@
-import React from 'react'
+import { createElement } from 'react'
 import ReactDOM from 'react-dom'
 import { StoreProvider } from '~StoreProvider'
 import App from '~App'
 
 ReactDOM.render(
-	<StoreProvider>
-		<App />
-	</StoreProvider>,
+	createElement(StoreProvider, null, createElement(App)),
 	document.getElementById('root')
 )
