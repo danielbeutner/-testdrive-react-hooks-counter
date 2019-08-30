@@ -39,6 +39,6 @@
     "husky": "^2.7.0",
     "parcel-bundler": "^1.12.3",
     "prettier": "1.18.2",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.2"
   }
 }
