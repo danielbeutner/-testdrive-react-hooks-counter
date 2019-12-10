@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react'
-import { useStore } from '~StoreProvider'
+import React from 'react'
+import { useStore } from './store'
 
-export default function Counter(): ReactElement {
+export default function Counter() {
 	const [state] = useStore()
 
 	return (
